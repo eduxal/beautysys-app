@@ -1,0 +1,30 @@
+<nav class="items-center justify-between p-6 mx-auto text-white sm:flex bg-e78b90">
+  <div class="flex justify-between">
+    <a class="text-2xl font-normal"> BeautySys </a>
+    <div class="sm:hidden">
+      <button id="menu-toggle" class="text-white" (click)="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  @if (isLogged) {
+    <div id="mobile-menu" #mobileMenu class="items-center my-2 sm:space-x-2 sm:flex">
+      <p>Logged</p>
+    </div>
+
+  }
+  @else {
+    <div id="mobile-menu" #mobileMenu class="items-center my-2 sm:space-x-2 sm:flex">
+      <button class="w-full px-4 py-2 my-2 font-semibold text-white transition duration-300 ease-in-out bg-transparent border rounded-sm sm:w-36 border-zinc-300 hover:bg-slate-300 hover:bg-opacity-25">
+        Iniciar Sesión
+      </button>
+
+      <button class="w-full px-4 py-2 m-auto font-semibold text-white transition duration-300 ease-in-out bg-transparent border rounded-sm sm:w-36 border-zinc-300 hover:bg-slate-300 hover:bg-opacity-25">
+        Registro
+      </button>
+    </div>
+  }
+</nav>
